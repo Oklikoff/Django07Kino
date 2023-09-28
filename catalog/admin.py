@@ -31,6 +31,7 @@ admin.site.register(Kino, Kinoadmin)
 
 class Stinline(admin.TabularInline):
     model = Kino
+
 class Statusadmib(admin.ModelAdmin):
     inlines = [Stinline]
 admin.site.register(Status,Statusadmib)

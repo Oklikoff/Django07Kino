@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 class Genre(models.Model):
     name = models.CharField(max_length=20, verbose_name='Жанр')
@@ -68,3 +68,5 @@ class Kino(models.Model):
     display_actors.short_description='Актеры'
 
 
+    def get_absolute_url(self): # Получает URL страницы объекта
+        return reverse('info',args=[self.id])
