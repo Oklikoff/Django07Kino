@@ -69,4 +69,5 @@ class Kino(models.Model):
 
 
     def get_absolute_url(self): # Получает URL страницы объекта
-        return reverse('info',args=[self.id])
+        return reverse('info',args=[self.id, self.title])
+        #return f'kino/{self.id}/{self.title}
