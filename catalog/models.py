@@ -14,6 +14,9 @@ class Director(models.Model):
     def __str__(self):
         return f'{self.lname},{self.fname}'
 
+    def get_absolute_url(self):
+        return reverse('infodirector', args=[self.id, f'{self.fname} {self.lname}'])
+
 class Actor(models.Model):
     fname = models.CharField(max_length=20, verbose_name='Имя')
     lname = models.CharField(max_length=20, verbose_name='Фамилия')
@@ -22,6 +25,10 @@ class Actor(models.Model):
 
     def __str__(self):
         return self.lname
+
+    def get_absolute_url(self):
+        return reverse('infoact', args=[self.id, f'{self.fname} {self.lname}'])
+
 
 class Status(models.Model):
     VIBOR = (('бесплатно','бесплатно'),('базовая','базовая'),('супер','супер'))
@@ -56,6 +63,7 @@ class Kino(models.Model):
     ager = models.ForeignKey(AgeRate, on_delete=models.SET_NULL, null=True)
     actor = models.ManyToManyField(Actor, verbose_name='Актеры')
     status = models.ForeignKey(Status, on_delete=models.SET_DEFAULT, default=1)
+    image=models.CharField(max_length=100,blank=True, null=True, verbose_name='Картинки')
 
     def __str__(self):
         return self.title
