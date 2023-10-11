@@ -1,3 +1,4 @@
+
 .menu{
     display: flex;
     flex-direction: row;
@@ -15,4 +16,14 @@
 
 .menu a:hover{
     background-color: yellow;
+}
+body{
+    background-image:url('../img/fon2.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
 }

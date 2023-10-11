@@ -16,11 +16,11 @@
                     <h4>{{ kino.title }}</h4>
                     <h4>{{ kino.ganre }}</h4>
                     {% if not user.username %}
-                         <a href="{% url 'prosmotr' kino.id one.id 0%}">
+                         <a href="{% url 'prosmotr' kino.id one.id 0 %}">
                             <button>Смотреть</button>
                          </a>
                     {% else %}
-                        <a href="{% url 'prosmotr' kino.id one.id user.id%}">
+                        <a href="{% url 'prosmotr' kino.id one.id user.id %}">
                             <button>Смотреть</button>
                         </a>
                     {% endif%}
