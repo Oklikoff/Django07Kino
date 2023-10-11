@@ -31,6 +31,7 @@ urlpatterns = [
     path('user/',include('django.contrib.auth.urls')),
     path('status/', views.status, name='status'),
     path('status/prosmotr/<int:id1>/<int:id2>/<str:id3>', views.prosmotr, name='prosmotr'),
-    path('status/buy/<int:type>',views.buy,name='buystatus')
+    path('status/buy/<int:type>',views.buy,name='buystatus'),
+    path('user/registr',views.registr,name='registr'),
 
 ]
