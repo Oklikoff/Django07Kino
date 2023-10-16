@@ -29,6 +29,10 @@
                 <a href="{% url 'buystatus' type=3 %}">Купить супер</a>
             </h4>
 
+            <h4>
+                <a href="{% url 'unsubscribe' type=4 %}">Отказаться от подписки</a>
+            </h4>
+
             {% else %}
                 <h4>
                     <a href="{% url 'login'  %}">Купить базовую</a>

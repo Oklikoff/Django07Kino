@@ -17,6 +17,11 @@
                 <td>{{ form.password.lable_tag }}Пароль:</td>
                 <td>{{ form.password }}</td>
             </tr>
+            <tr>
+                <td>
+                    <a href="{% url 'password_reset' %}">забыл пароль</a>
+                </td>
+            </tr>
         </table>
         <input type="submit" value="вход">
     </form>

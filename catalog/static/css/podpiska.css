@@ -8,6 +8,7 @@
 }
 
 .card{
+    position: relative;
     text-align: center;
     border: 2px solid;
     width: 10%;
@@ -15,4 +16,5 @@
 .card img{
     width: 100%;
     height: 60%;
+
 }

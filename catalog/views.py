@@ -73,8 +73,8 @@ def prosmotr(req,id1,id2,id3):
         status=status[0].id#нашли id его подписки(она одна)
         print(status)
     else:
-        if id3==0:#выдает гостю подписку номер1 free
-            status=1
+        if id3 == 0:
+            status = 1
     if status>=id2:#сравниваем статус и разрешение фильма
         print('ok')
         permission=True
